@@ -28,12 +28,13 @@ def simulation(keys, mousestate):
         ball = balls.tellwitchball(pygame.mouse.get_pos())
         if ball != None and clock2 < timec:
             windows.createwin(ball)
-            clock2 = timec + 20
+            ball.clicked = Color()
+            clock2 = timec + 100
     
 
     if keys[32] and clock < timec:
         balls.freez = False if balls.freez else True
-        clock = timec +  20
+        clock = timec +  100
 
 
 windows = Windows()
@@ -58,7 +59,7 @@ while Running:
 
     pygame.display.flip()
     screen.fill((200, 200, 200))
-    time.sleep(.001)
+    time.sleep(.01)
     timec += 1
 
 

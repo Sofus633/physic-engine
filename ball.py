@@ -19,6 +19,8 @@ class Ball:
         self.color = Color()
         self.freez = False
         self.size = 10
+        self.clicked = False
+
 
     def update(self):
         self.color.set(math.sqrt(self.velo.x**2 + self.velo.y**2) * 100)
@@ -134,15 +136,15 @@ def collition(ball1, ball2):
     overlap = min_distance - distance + 10
     if distance == 0:  
         distance = 0.01
-    dx /= distance
+    dx /= distance 
     dy /= distance
 
-    ball1.posvec += Vector2(dx * overlap / 2, dy * overlap / 2)
-    ball2.posvec -= Vector2(dx * overlap / 2, dy * overlap / 2)
+    ball1.posvec += Vector2(dx * overlap / 2, dy * overlap / 2)  
+    ball2.posvec -= Vector2(dx * overlap / 2, dy * overlap / 2) 
   
         
 
     
     
-    ball2.velo = v2_final
-    ball1.velo = v1_final
+    ball2.velo = v2_final* .8 # Friction
+    ball1.velo = v1_final* .8

@@ -20,3 +20,4 @@ class Color:
     def set(self, number):
         self.rgb = [0, 0, 0]
         self.add(number)
+    

@@ -4,7 +4,7 @@ class Vector2:
         self.y = y
 
     def __str__(self):
-        return f"Vector2({self.x}, {self.y})"
+        return f"Vector2({"%.2f" % round(self.x, 2)}, {"%.2f" % round(self.y, 2)})"
 
     def __add__(self, other):
         if type(other) == list or type(other) == tuple:
