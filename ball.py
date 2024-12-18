@@ -109,7 +109,7 @@ class Balls:
 
                 ball = self.balls[i]
                 
-                print(f"{ball.num}, {ball.velo}, {ball.posvec}")
+                
                 return ball 
         return None
 
@@ -129,7 +129,7 @@ def collition(ball1, ball2):
     dx, dy = ball1.posvec.x- ball2.posvec.x, ball1.posvec.y - ball2.posvec.y
     angle = math.atan2(dy, dx)
     distance = math.sqrt(dx**2 + dy**2)
-    print(distance , min_distance)
+    
 
     overlap = min_distance - distance + 10
     if distance == 0:  

@@ -4,7 +4,7 @@ class Color:
         self.rgb = [r + random.randint(0, 255),b+ random.randint(0, 255),g+ random.randint(0, 255)]
 
     def get(self):
-        return self.rgb
+        return (int(self.rgb[0]), int(self.rgb[1]), int(self.rgb[2]))
 
     def add(self, number):
         for i in range(len(self.rgb)):
